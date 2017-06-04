@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">VolleyDemo</string>
     <string name="get">GET RESPONSE</string>
+    <string name="get_image">GET IMAGE</string>
 </resources>
