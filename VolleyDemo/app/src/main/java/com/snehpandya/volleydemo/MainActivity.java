@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                //Add request to RequestQueue
-                requestQueue.add(jsonObjectRequest);
+                //Singleton instance for continuous call until the activity ends
+                Singleton.getmInstance(getApplicationContext()).addToRequestQueue(jsonObjectRequest);
             }
         });
     }
