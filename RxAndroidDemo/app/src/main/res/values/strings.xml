@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RxAndroidDemo</string>
+    <string name="button">Button</string>
+</resources>
