@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GsonDemo</string>
+    <string name="basic_json">Basic JSON</string>
+    <string name="nested_json">Nested JSON</string>
+</resources>
