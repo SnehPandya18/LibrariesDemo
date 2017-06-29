@@ -9,7 +9,7 @@
     <FrameLayout android:layout_width="match_parent"
                  android:layout_height="match_parent"
                  android:id="@+id/container"
-                 android:background="#06ff87"/>
+                 android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/dismiss"
@@ -17,8 +17,9 @@
         android:layout_height="wrap_content"
         android:text="> Swipe to dismiss > > >"
         android:padding="30dp"
+        android:textColor="#000"
         android:gravity="center"
         android:layout_gravity="bottom|center_horizontal"
-        android:background="@color/colorPrimary"/>
+        android:background="@android:color/transparent"/>
 
 </android.support.design.widget.CoordinatorLayout>
