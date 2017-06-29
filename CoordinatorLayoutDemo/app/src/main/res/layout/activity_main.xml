@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.snehpandya.coordinatorlayoutdemo.MainActivity">
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/container"
+                 android:background="#06ff87"/>
+
+    <TextView
+        android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="> Swipe to dismiss > > >"
+        android:padding="30dp"
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@color/colorPrimary"/>
+
+</android.support.design.widget.CoordinatorLayout>
