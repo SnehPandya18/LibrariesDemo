@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         Glide.with(this)
                 .load("https://pbs.twimg.com/profile_images/2652314177/3c0f918ced0ad55d8a628c1df7739b62_400x400.png")
                 .error(R.mipmap.ic_launcher_round)
-                .override(400, 400)
                 .into(imageView);
     }
 }
