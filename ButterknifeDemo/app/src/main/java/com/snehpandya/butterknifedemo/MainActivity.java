@@ -1,5 +1,6 @@
 package com.snehpandya.butterknifedemo;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         title.setText("Sneh Pandya");
         title.setTextColor(red);
         mImageView.setImageDrawable(image);
+    }
+
+    @OnClick(R.id.button2)
+    void clicked() {
+        Intent intent = new Intent(MainActivity.this, SimpleActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.button)
