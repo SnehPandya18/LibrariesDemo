@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ViewModel</string>
+    <string name="team_a">Team A</string>
+    <string name="score">Score</string>
+    <string name="zero">0</string>
+    <string name="team_b">Team B</string>
+    <string name="plus_one_point">+1 Point</string>
+    <string name="foul">Foul</string>
+    <string name="plus_one_foul">+1 Foul</string>
+    <string name="reset">RESET</string>
+    <string name="plus_two_points">+2 Points</string>
+    <string name="plus_three_points">+3 Points</string>
+</resources>
