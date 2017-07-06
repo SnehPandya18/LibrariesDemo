@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDismiss(final View view) {
                 Intent i = new Intent(MainActivity.this, NewActivity.class);
                 startActivity(i);
+                finish();
             }
 
             @Override

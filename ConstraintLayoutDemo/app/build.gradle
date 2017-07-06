@@ -1,8 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
+    aaptOptions{
+        cruncherEnabled false
+    }
     compileSdkVersion 25
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.snehpandya.constraintlayoutdemo"
         minSdkVersion 21
