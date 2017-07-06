@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tab1"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Tab 1"/>
+        <item
+            android:id="@+id/tab2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Tab 2"/>
+        <item
+            android:id="@+id/tab3"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Tab 3"/>
+    </group>
+</menu>
