@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MaterialBottomDemo</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+    <string name="music">Music</string>
+</resources>
