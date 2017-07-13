@@ -1,5 +1,6 @@
 package com.snehpandya.databindingdemo2;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 binding.textviewFirstname.setText(binding.edittextFirstname.getText().toString());
                 binding.textviewLastname.setText(binding.edittextLastname.getText().toString());
+            }
+        });
+
+        binding.buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NewActivity.class);
+                startActivity(intent);
             }
         });
     }

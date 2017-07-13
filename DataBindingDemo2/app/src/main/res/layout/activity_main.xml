@@ -104,6 +104,14 @@
                 android:onClick="@{handler::onButtonClick}"
                 android:tag="0"
                 android:text="@string/counter"/>
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@string/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </ScrollView>
 </layout>
