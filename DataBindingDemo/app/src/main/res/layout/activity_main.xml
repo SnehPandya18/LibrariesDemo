@@ -1,44 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
+
         <variable
             name="user"
             type="com.snehpandya.databindingdemo.User"/>
-        <variable
-            name="main"
-            type="com.snehpandya.databindingdemo.MainActivity"/>
     </data>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context="com.snehpandya.databindingdemo.MainActivity">
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:text="@{user.name}"
-            android:textStyle="bold"/>
+            android:orientation="vertical"
+            tools:context="com.snehpandya.databindingdemo.MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:text="@{user.surname}"
-            android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:tag="name"
+                android:text="@{user.name}"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
 
-        <ImageView
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:src="@{user.image}"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:tag="surname"
+                android:text="@{user.surname}"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:tag="age"
+                android:text="@{Integer.toString(user.age)}"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@{user.image}"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Name"
+                android:text="@{user.name}"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Surname"
+                android:text="@{user.surname}"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Age"
+                android:text="@{user.age}"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="UPDATE"/>
+        </LinearLayout>
+    </ScrollView>
 </layout>

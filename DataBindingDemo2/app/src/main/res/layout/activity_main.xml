@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.snehpandya.databindingdemo2.User"/>
+
+        <variable
+            name="user"
+            type="User"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context="com.snehpandya.databindingdemo2.MainActivity">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:src="@{user.image}"/>
+
+            <TextView
+                android:id="@+id/textview_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{user.name}"
+                tools:text="First Name"/>
+
+            <TextView
+                android:id="@+id/textview_lastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{user.surname}"
+                tools:text="Last Name"/>
+
+            <TextView
+                android:id="@+id/textview_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@{user.age}"
+                tools:text="Age"/>
+
+            <EditText
+                android:id="@+id/edittext_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="@string/name"/>
+
+            <EditText
+                android:id="@+id/edittext_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="@string/surname"/>
+
+            <EditText
+                android:id="@+id/edittext_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:hint="@string/age"
+                android:text="@={user.age}"/>
+
+            <Button
+                android:id="@+id/button_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:text="@string/update"/>
+        </LinearLayout>
+    </ScrollView>
+
+</layout>
+

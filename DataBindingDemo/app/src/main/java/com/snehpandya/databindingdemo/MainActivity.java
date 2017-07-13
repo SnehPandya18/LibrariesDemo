@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        User user = new User("Sneh", "Pandya", R.mipmap.ic_launcher);
+        User user = new User("Sneh", "Pandya", "22", R.mipmap.ic_launcher);
         binding.setUser(user);
     }
 }

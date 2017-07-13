@@ -1,4 +1,4 @@
-package com.snehpandya.databindingdemo;
+package com.snehpandya.databindingdemo2;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
@@ -6,11 +6,14 @@ import android.databinding.BindingAdapter;
 import android.widget.ImageView;
 
 /**
- * Created by Sneh on 06-06-2017.
+ * Created by sneh.pandya on 13/07/17.
  */
 
 public class User extends BaseObservable {
-    private String name, surname, age;
+
+    private String name;
+    private String surname;
+    private String age;
     private int image;
 
     public User(String name, String surname, String age, int image) {
@@ -40,16 +43,28 @@ public class User extends BaseObservable {
         notifyPropertyChanged(BR.surname);
     }
 
-    public int getImage() { return image; }
+    @Bindable
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+        notifyPropertyChanged(BR.age);
+    }
 
     @Bindable
-    public String getAge() { return age; }
+    public int getImage() {
+        return image;
+    }
 
-    public void setAge(String age) { this.age = age; }
-
+    public void setImage(int image) {
+        this.image = image;
+        notifyPropertyChanged(BR.image);
+    }
 
     @BindingAdapter("android:src")
-    public static void setImageResource(ImageView imageView, int resource) {
-        imageView.setImageResource(resource);
+    public static void setImageResource(ImageView imageView, int resrouce) {
+        imageView.setImageResource(resrouce);
     }
 }

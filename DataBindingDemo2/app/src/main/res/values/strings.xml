@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBindingDemo2</string>
+    <string name="update">UPDATE</string>
+    <string name="age">Age</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+</resources>
