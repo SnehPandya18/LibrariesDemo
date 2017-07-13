@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         final ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         User user = new User("Sneh", "Pandya", "22", R.drawable.ic_launcher);
         binding.setUser(user);
+        binding.setHandler(new Handler());
         binding.buttonUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

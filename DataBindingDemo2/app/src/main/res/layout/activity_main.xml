@@ -6,9 +6,15 @@
 
         <import type="com.snehpandya.databindingdemo2.User"/>
 
+        <import type="com.snehpandya.databindingdemo2.Handler"/>
+
         <variable
             name="user"
             type="User"/>
+
+        <variable
+            name="handler"
+            type="Handler"/>
     </data>
 
     <ScrollView
@@ -88,8 +94,16 @@
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
                 android:text="@string/update"/>
+
+            <Button
+                android:id="@+id/button_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:onClick="@{handler::onButtonClick}"
+                android:tag="0"
+                android:text="@string/counter"/>
         </LinearLayout>
     </ScrollView>
-
 </layout>
-

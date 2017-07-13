@@ -4,4 +4,5 @@
     <string name="age">Age</string>
     <string name="surname">Surname</string>
     <string name="name">Name</string>
+    <string name="counter">COUNTER</string>
 </resources>
