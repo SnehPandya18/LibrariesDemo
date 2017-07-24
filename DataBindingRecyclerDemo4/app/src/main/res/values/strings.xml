@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DataBindingRecyclerDemo4</string>
+
+    <plurals name="numberOfComments">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
+</resources>

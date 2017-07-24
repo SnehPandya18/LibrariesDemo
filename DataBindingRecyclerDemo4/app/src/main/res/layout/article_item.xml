@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="article"
+            type="com.snehpandya.databindingrecyclerdemo4.Article" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/contact_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@{article.highlight ? @color/highlight : 0xffffffff}"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                app:image="@{article.imageUrl}" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image"
+                android:layout_alignStart="@+id/image"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:text="@{article.title}"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/excerpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/image"
+                android:layout_below="@+id/image"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@{article.excerpt}"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/read_more"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/excerpt"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="@{article.onReadMoreClicked}"
+                android:padding="10dp"
+                android:text="Read more" />
+
+            <Button
+                android:id="@+id/comments"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/excerpt"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/read_more"
+                android:onClick="@{article.onCommentsClicked}"
+                android:text="@{@plurals/numberOfComments(article.commentsNumber, article.commentsNumber)}"
+                android:visibility="@{article.commentsNumber == 0 ? view.GONE : view.VISIBLE}" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>
