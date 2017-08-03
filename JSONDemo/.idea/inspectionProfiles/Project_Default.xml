@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AndroidLintGradleCompatible" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintGradleDependency" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintGradleDynamicVersion" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintMissingConstraints" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintNewApi" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintOldTargetApi" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AndroidLintSetTextI18n" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PrivateMemberAccessBetweenOuterAndInnerClass" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
